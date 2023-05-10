@@ -1,1 +1,0 @@
-//Dashboard (forside), som har tre seksjoner; Gameshop, My Games og My Favourites

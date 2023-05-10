@@ -1,0 +1,74 @@
+@import 'base-variables';
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $main-bg-color;
+    padding: 20px;
+    min-height: 100vh; 
+  
+    .game-shop,
+    .my-games {
+      background-color: $light-gray;
+      width: 100%;
+      max-width: 1200px;
+      padding: $card-padding;
+      margin-bottom: 20px;
+    }
+  
+    .my-favourites {
+      background-color: $light-gray;
+      width: 100%;
+      max-width: 1200px;
+      padding: $card-padding;
+      margin-bottom: 20px;
+    }
+  
+    .dashboard,
+    .my-games-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .my-games-container {
+      width: calc(100% - 320px);
+      max-width: 1200px;
+      padding: $card-padding;
+      margin-bottom: 20px;
+    }
+  
+    .my-favourites {
+      width: 300px;
+      margin-left: 20px;
+    }
+  
+    .game-card {
+      display: flex;
+      justify-content: space-between;
+      background-color: $main-bg-color;
+      border: 1px solid $light-gray;
+      padding: $card-padding;
+      margin: $card-margin;
+  
+      img {
+        width: $game-card-image-width;
+        object-fit: cover;
+      }
+  
+      .text-content {
+        width: $text-content-width;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+  }
