@@ -10,7 +10,7 @@ function DashBoard() {
       try {
         // Hent ut de tre mest populære spillene fra API-et
         const response = await fetch(
-          'https://api.rawg.io/api/games?ordering=-action&page_size=3&key=cb756380bfee4e919c3c398e5bd0da08'
+          'https://api.rawg.io/api/games?ordering=-rating&page_size=3&key=cb756380bfee4e919c3c398e5bd0da08'
         );
         const data = await response.json();
         setNewestGames(data.results);
@@ -31,24 +31,28 @@ function DashBoard() {
 
   return (
     <div className="dashboard">
-      <section className="gameshop">
+      <section className="game-shop">
         <h2>Game Shop</h2>
-        {newestGames.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
+        <div className="game-list">
+          {newestGames.map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
+        </div>
       </section>
 
-      <section className="mygames">
+      <section className="my-games">
         <h2>My Games</h2>
-        {myGames.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
+        <div className="game-list">
+          {myGames.map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
+        </div>
       </section>
 
-      <section className="myfavourites">
+      <aside className="my-favourites">
         <h2>My Favourites</h2>
         <p>Coming soon...</p>
-      </section>
+      </aside>
     </div>
   );
 }
