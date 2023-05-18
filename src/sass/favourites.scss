@@ -1,0 +1,57 @@
+.favourites {
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  
+    .game-card {
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+  
+      h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #555;
+      }
+  
+      button {
+        margin-top: 10px;
+        background-color: #4287f5;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 10px;
+  
+      li {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+  }
+  
