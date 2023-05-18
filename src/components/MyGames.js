@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import GameCard from "./GameCard";
+import "../sass/mygames.scss";
+
 
 const MyGames = () => {
   const [games, setGames] = useState([]);
