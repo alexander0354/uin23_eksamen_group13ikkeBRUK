@@ -12,7 +12,7 @@ const MyGames = () => {
       const response = await axios.get('https://api.rawg.io/api/games?key=cb756380bfee4e919c3c398e5bd0da08', {
         params: {
           ordering: '-rating', // Endret fra '-released' til '-rating'
-          page_size: 20,
+          page_size: 10,
         },
         headers: {
           'User-Agent': 'GameHub/1.0',
